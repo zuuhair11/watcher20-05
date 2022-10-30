@@ -12,7 +12,7 @@ class OMDbAPI {
     }
 
     async getMovies(imdb) {
-        const response = await fetch(`http://www.omdbapi.com/?i=${imdb}&apikey=${this._apiKey}`);
+        const response = await fetch(`https://www.omdbapi.com/?i=${imdb}&apikey=${this._apiKey}`);
         const data = await response.json();
         return data;
     }
