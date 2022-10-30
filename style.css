@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+/* ==============================
+    The header
+================================= */
+header {
+    padding: 100px 0 80px 0;
+    background-image: url('images/header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 51px;
+
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 750px;
+    width: 90%;
+}
+
+
+header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+header a.onfocus {
+    font-weight: 800;
+    font-size: 2.7rem;
+}
+
+
+/* ==============================
+    The search box
+================================= */
+div.search-box {
+    position: relative;
+    top: 100px;
+
+    display: flex;
+    justify-content: center;
+}
+
+div.search-box .search-input,
+div.search-box .search-btn {
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: 500;
+    font-size: .9rem;
+}
+/* -------------------------------------
+    The icon that sticks in left corner
+---------------------------------------- */
+div.search-box i {
+    position: absolute;
+    left: 10px;
+    top: 13px;
+    color: inherit;
+    opacity: 0.6;
+}
+
+div.search-box .search-input {
+    width: 100%;
+    background-color: #2E2E2F;
+    color: #A5A5A5;
+    border-radius: 6px 0 0 6px;
+    padding-left: 2.1rem;
+}
+
+div.search-box .search-input:focus {
+    outline: none;
+}
+div.search-box .search-btn {
+    width: 20%;
+    border-radius: 0 6px 6px 0;
+    background-color: #4B4B4B;;
+    color: inherit;
+    transition: all 500ms;
+}
+div.search-box .search-btn:hover,
+div.search-box .search-btn:focus {
+    cursor: pointer;
+    background-color: orangered;
+    width: 21%;
+    font-size: .92rem;
+}
+
+
+
+/* =================================
+    The results comes from JS
+==================================== */
+main.results {
+    height: 100vh;
+}
+
+main .first-placeholder {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Play with first-placeholder */
+main .hide-placeholder {
+    display: none;
+}
+
+
+
+.first-placeholder img {
+    width: 60px;
+    opacity: .5;
+}
+.first-placeholder p {
+    font-weight: 700;
+    margin: 0;
+    opacity: 0.4;
+    color: rgb(118, 122, 168);
+}
+
+
+
+
+/* =================================
+    API
+==================================== */
+
+.output-container {
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+.output-container h4,
+.output-container p {
+    margin: 0;
+}
+
+.output-container h4 {
+    display: inline;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #FFFFFF;;
+}
+.output-container i.fa-star {
+    color: #FEC654;
+    width: 5px;
+    height: 5px;
+    margin-right: 13px;
+}
+
+.output-container p {
+    margin-top: 10px;
+    color: #A5A5A5;
+    font-weight: 300;
+    font-size: .84rem;
+}
+
+.details {
+    margin-top: 10px;
+}
+
+.details .runtime,
+.details .genre,
+.details .watchlist {
+    margin-right: 12px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.details .watchlist {
+    cursor: pointer;
+    float: right;
+}
+
+hr {
+    border-color: #2C2C2C;
+}
+
+.output-container .poster-movie {
+    margin-right: 20px;
+    width: 100px;
+    height: 148px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.output-container .about-movie {
+    width: 80%;
+}
+
+/* ===========================
+    Watchlist
+============================== */
+.watchlist-empty {
+    display: flex;
+    margin-top: 15px;
+}
+
+span.adding-something {
+    margin-left: 5px;
+    font-size: .8em;
+    font-weight: 700;
+}

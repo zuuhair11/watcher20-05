@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+        <title>My Watchlist</title>
+    </head>
+    <body>
+        <header>
+            <div class="nav container">
+                <a href="index.html" class="onfocus">My Watchlist</a>
+                <a href="index.html">Find your film</a>
+            </div>
+        </header>
+
+        <main class="results container">
+            <div class="first-placeholder">
+                <p>Your watchlist is looking a little empty...</p>
+                <div class="watchlist-empty">
+                    <i class="fa-solid fa-circle-plus"></i><span class="adding-something">Let’s add some movies!</span>
+                </div>
+            </div>
+            <div class="second-from-api second-from-localStorage">
+                <!-- Will rendered from the LocalStorage -->
+            </div>
+        </main>
+
+        <script type="module" src="index.js"></script>
+    </body>
+</html>

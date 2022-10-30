@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+        <title>Find your film</title>
+    </head>
+    <body>
+        <header>
+            <div class="nav container">
+                <a class="onfocus" href="index.html">Find your film</a>
+                <a href="watchlist.html">My Watchlist</a>
+            </div>
+            <div class="search-box container">
+                <i class="fa fa-magnifying-glass"></i>
+                <input id="search-input" type="text" class="search-input">
+                <button id="search-btn" class="search-btn">Search</button>
+            </div>
+        </header>
+
+        <main class="results container">
+            <div class="first-placeholder">
+                <img src="images/film.svg" alt="film icons appears at the beginning">
+                <p>Start exploring</p>
+            </div>
+            <div class="second-from-api">
+                <!-- Will rendered from the from tha API -->
+            </div>
+        </main>
+        
+
+        <script type="module" src="index.js"></script>
+    </body>
+</html>
