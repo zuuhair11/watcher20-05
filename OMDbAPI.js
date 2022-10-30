@@ -6,7 +6,7 @@ class OMDbAPI {
     }
 
     async getMoviesID(moveName) {
-        const response = await fetch(`http://www.omdbapi.com/?s=${moveName}&type=${this._type}&page=${this._page}&apikey=${this._apiKey}`);
+        const response = await fetch(`https://www.omdbapi.com/?s=${moveName}&type=${this._type}&page=${this._page}&apikey=${this._apiKey}`);
         const data = await response.json();
         return data.Search.map( movieID => movieID.imdbID );
     }
