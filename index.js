@@ -1,18 +1,29 @@
 // Importing
 import OMDbAPI from "./OMDbAPI.js";
 import {UI} from "./UI.js";
+import LStorage from "./LS.js";
 
 // Instantiate
 const http = new OMDbAPI();
 const ui = new UI();
+const storage = new LStorage();
 
 // Getting the element from the DOM
 const searchInput = document.getElementById('search-input');
 
+// Watchlist array that stored on localStorage
+const watchlistArray = JSON.parse(storage.getMoviesFromLocalStorage());
 
 
-// Listen for the click on the search button
+
 document.body.addEventListener('click', (e) => {
+    // Listen for the saved to the watchlist
+    if(e.target.classList.contains('watchlist')) {
+        const movie = e.target.dataset.movie;
+        watchlistArray.push(movie);
+        storage.setMovieToLocalStorage(watchlistArray)
+    }
+    // Listen for the click on the search button
     if(e.target.classList.contains('search-btn')) {
         const movieName = searchInput.value;
         // Check if user doesn't entred anything 

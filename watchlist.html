@@ -14,7 +14,7 @@
     <body>
         <header>
             <div class="nav container">
-                <a href="index.html" class="onfocus">My Watchlist</a>
+                <a href="watchlist.html" class="onfocus">My Watchlist</a>
                 <a href="index.html">Find your film</a>
             </div>
         </header>
@@ -23,7 +23,7 @@
             <div class="first-placeholder">
                 <p>Your watchlist is looking a little empty...</p>
                 <div class="watchlist-empty">
-                    <i class="fa-solid fa-circle-plus"></i><span class="adding-something">Let’s add some movies!</span>
+                    <a href="index.html"><i class="fa-solid fa-circle-plus"></i><span class="adding-something">Let’s add some movies!</span></a>
                 </div>
             </div>
             <div class="second-from-api second-from-localStorage">
@@ -31,6 +31,7 @@
             </div>
         </main>
 
+        <script type="module" src="watchlist.js"></script>
         <script type="module" src="index.js"></script>
     </body>
 </html>

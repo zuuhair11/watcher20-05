@@ -192,7 +192,8 @@ main .hide-placeholder {
     font-weight: 400;
 }
 
-.details .watchlist {
+.details .watchlist,
+.details .remove {
     cursor: pointer;
     float: right;
 }
@@ -225,4 +226,9 @@ span.adding-something {
     margin-left: 5px;
     font-size: .8em;
     font-weight: 700;
+}
+
+.watchlist-empty a {
+    text-decoration: none;
+    color: #FFFFFF;
 }
