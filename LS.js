@@ -14,6 +14,12 @@ class LStorage {
             return this._watchlistArray = JSON.stringify([]);
         }
     }
+
+    deleteMovie(movie) {
+        const indexOfMovie = this._watchlistArray(movie);
+        console.log(indexOfMovie);
+
+    }
 }
 
 export default LStorage;

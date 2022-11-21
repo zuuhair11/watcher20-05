@@ -19,10 +19,25 @@ const watchlistArray = JSON.parse(storage.getMoviesFromLocalStorage());
 document.body.addEventListener('click', (e) => {
     // Listen for the saved to the watchlist
     if(e.target.classList.contains('watchlist')) {
-        const movie = e.target.dataset.movie;
-        watchlistArray.push(movie);
-        storage.setMovieToLocalStorage(watchlistArray)
+        if(e.target.firstChild.classList.contains('fa-circle-plus')) {
+            const movie = e.target.dataset.movie;
+            watchlistArray.push(movie);
+            storage.setMovieToLocalStorage(watchlistArray);
+            e.target.innerHTML = `
+                <i class="fa-solid fa-circle-minus"></i> Remove
+            `;
+            console.log(e.target)
+        }
+        if(e.target.firstChild.classList.contains('fa-circle-minus')) {
+            storage.deleteMovie(movie);
+            e.target.innerHTML = `
+                <i class="fa-solid fa-circle-plus"></i> Watchlist
+            `;
+        }
     }
+    // if(e.target.classList.contains('watchlist')) {
+        
+    // }
     // Listen for the click on the search button
     if(e.target.classList.contains('search-btn')) {
         const movieName = searchInput.value;
